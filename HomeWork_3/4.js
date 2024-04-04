@@ -18,4 +18,46 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const firstNumber = Math.trunc(Math.random() * 10);
+const secondNumber = Math.trunc(Math.random() * 10);
+console.log(
+  `Сумма чисел ${firstNumber} и ${secondNumber} = ${summ(
+    firstNumber,
+    secondNumber
+  )}
+Разность чисел ${firstNumber} и ${secondNumber} = ${diff(
+    firstNumber,
+    secondNumber
+  )}
+Произведение чисел ${firstNumber} и ${secondNumber} = ${mult(
+    firstNumber,
+    secondNumber
+  )}
+Частное чисел ${firstNumber} и ${secondNumber} = ${div(
+    firstNumber,
+    secondNumber
+  )}`
+);
+
+// ===========================================================================
+
+function summ(a, b) {
+  return a + b;
+}
+function diff(a, b) {
+  const max = Math.max(a, b);
+  if (a < max) {
+    return b - a;
+  }
+  return a - b;
+}
+function mult(a, b) {
+  return a * b;
+}
+function div(a, b) {
+  const max = Math.max(a, b);
+  if (a < max) {
+    return b / a;
+  }
+  return a / b;
+}
