@@ -10,4 +10,17 @@
 три числа. Проверять их не нужно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+alert("Введите последовательно три числа");
+const firstNumber = +prompt("Первое");
+const secondNumber = +prompt("Второе");
+const thirdNumber = +prompt("Третье");
+findMax(firstNumber, secondNumber, thirdNumber);
+
+// ===========================================================================
+
+function findMax(a, b, c) {
+  const maxNumber = Math.max(a, b, c);
+  alert(
+    `Максимальное значение среди чисел ${a}, ${b}, ${c} равно ${maxNumber}.`
+  );
+}
