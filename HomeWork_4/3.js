@@ -14,4 +14,22 @@
 не окажется, значит нужно будет вывести пустой массив.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const array = [];
+let summArrayElements = 0;
+let minArrayElement;
+const newArrayContainingIndexes = [];
+
+for (let i = 0; i < 5; i++) {
+  array.push(Math.trunc(Math.random() * 10));
+}
+for (let i = 0; i < array.length; i++) {
+  summArrayElements += array[i];
+  if (i === 0) minArrayElement = array[0];
+  if (minArrayElement > array[i]) minArrayElement = array[i];
+  if (array[i] === 3) newArrayContainingIndexes.push(i);
+}
+console.log(`Сформирован массив: [${array}]`);
+console.log("Сумма элементов массива " + summArrayElements);
+console.log("Минимальное значение в массиве " + minArrayElement);
+console.log(`Новый массив, содержащий индексы сгенерированного выше массива,
+в которых значение равно 3: [${newArrayContainingIndexes}]`);
