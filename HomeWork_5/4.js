@@ -31,4 +31,24 @@ const products = [
   },
 ];
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const filteredProducts = products.filter(
+  (item) => item.photos !== undefined && item.photos.length !== 0
+);
+
+const sortedProducts = products.sort((a, b) => a.price - b.price);
+
+console.log(filteredProducts);
+console.log(sortedProducts);
+
+/* Это моё решение. Так думать было проще, потому что сразу не разобрался с filter 
+
+// function arrayFilter(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i].photos !== undefined) {
+//       if (array[i].photos.length !== 0) {
+//         return .push (array[i]);
+//       }
+//     }
+//   }
+// }
+*/
