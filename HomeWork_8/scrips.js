@@ -45,6 +45,7 @@ const ulElement = document.querySelector("ul");
 
 ulElement.addEventListener("click", function (e) {
   if (e.target.tagName === "BUTTON") {
+    e.stopPropagation();
     console.log(e.target.textContent);
   }
 });
